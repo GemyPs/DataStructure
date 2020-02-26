@@ -18,6 +18,7 @@ public:
         tail = NULL;
     }
     void CreateNode(int value){
+        
         Node *temp = new Node;
 
         temp->Data = value;
