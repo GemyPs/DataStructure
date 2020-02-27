@@ -109,15 +109,6 @@ public:
 
 };
 int main() {
-
-    DLL l;
-    l.CreateNode(15);
-    l.CreateNode(20);
-    l.CreateNode(25);
-    l.InsertFront(1);
-    l.InsertPos(3, 100);
-    l.DeletePos(3);
-    //l.DisplayF();
-    l.DisplayR();
+    
     return 0;
 }
