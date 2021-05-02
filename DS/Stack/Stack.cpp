@@ -26,7 +26,7 @@ void Stack<T>::pop(){
     for(int i = 1; i < NodesCounter-1; ++i){
         pre = pre->link;
     }
-
+    --NodesCounter;
     tail = pre;
     tail->link = NULL;
     delete(cur);
@@ -35,4 +35,14 @@ void Stack<T>::pop(){
 template<typename T>
 void Stack<T>::top(){
     cout << tail->data;
+}
+
+template<typename T>
+bool Stack<T>::empty(){
+    return (NodesCounter == 0);
+}
+
+template<typename T>
+int Stack<T>::size(){
+    return NodesCounter;
 }
