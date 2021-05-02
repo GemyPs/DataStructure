@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
-#include <Stack.h>
-
+#include "Stack.h"
 
 template<typename T>
 void Stack<T>::push(int value){ 
@@ -11,8 +9,10 @@ void Stack<T>::push(int value){
     if(NodesCounter == 0){head = tail = holder;}
     else{
         tail -> link = holder;
+        tail = holder;
     }
     ++NodesCounter;
+    holder = NULL;
     delete (holder);
 }
 
@@ -23,11 +23,16 @@ void Stack<T>::pop(){
 
     cur = tail;
     pre = head;
-    for(int i = 1; i <= NodesCounter-1; ++i){
+    for(int i = 1; i < NodesCounter-1; ++i){
         pre = pre->link;
     }
 
     tail = pre;
     tail->link = NULL;
     delete(cur);
+}
+
+template<typename T>
+void Stack<T>::top(){
+    cout << tail->data;
 }

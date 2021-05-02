@@ -22,7 +22,7 @@ public:
     }
     void push(int value);
     void pop();
-    int top();
+    void top();
     bool empty();
     int size();
 };
