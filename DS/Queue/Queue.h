@@ -13,7 +13,7 @@ private:
     int NumOfElements;
     
 public:
-    queue(){
+    Queue(){
         First = Last = NULL;
         NumOfElements = 0;
     }

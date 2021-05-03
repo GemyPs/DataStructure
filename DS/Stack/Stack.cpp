@@ -3,8 +3,8 @@
 template<typename T>
 void Stack<T>::push(int value){ 
     Node *holder = new Node;
-    holder -> data = value;
-    holder -> link = NULL;
+    holder->data = value;
+    holder->link = NULL;
     
     if(NodesCounter == 0){head = tail = holder;}
     else{
