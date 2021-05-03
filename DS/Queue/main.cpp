@@ -8,12 +8,12 @@ int main(){
     q.push_back(6);
     q.push_back(7);
 
-    q.front();
+    cout << q.front() << endl;
     q.pop_front();
-    q.front();
+    cout << q.front() << endl;
 
-    q.back();
+    cout << q.back() << endl;
 
-    q.size();
-    q.empty();
+    cout << q.size() << endl;
+    cout << q.empty();
 }

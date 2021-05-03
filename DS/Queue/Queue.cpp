@@ -18,18 +18,18 @@ void Queue<var>::push_back(int value){
 
 template<typename var>
 void Queue<var>::pop_front(){
-    if(NumOfElements == 0)  cout << "Error!\n Queue is already empty.";
+    if(NumOfElements == 0){  cout << "Error!\n Queue is already empty."; return; }
     Node *LastElement = new Node;
     Node *pre = new Node;
 
     LastElement = First;    // To make the LastElement pointer refers to the first element in (that we want to pop);
     pre = Last; 
-    for(int i = 1; i < NumOfElements; ++i){ // To know what is the previous element of the first element in;
+    for(int i = 1; i < NumOfElements-1; ++i){ // To know what is the previous element of the first element in;
         pre = pre->Link;
     }   
     First = pre;    // To make the previous element be the first element in the queue;
     delete(LastElement);
-    delete(pre);
+    NumOfElements--;
 }
 
 template<typename var>
